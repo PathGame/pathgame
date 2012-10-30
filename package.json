@@ -1,0 +1,14 @@
+{
+  "name": "pathgame",
+  "version": "0.1.3",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "express": "3.0.0rc4",
+    "jade": "*",
+    "less-middleware": "*",
+    "mongodb": "*"
+  }
+}
