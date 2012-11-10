@@ -1,5 +1,43 @@
 extends layout
 
-block content
-  h1= title
-  p Welcome to #{title}
+block title
+  | PathGame
+
+block container    
+  .focus
+  //
+     Main hero unit for a primary marketing message or call to action 
+  .hero-unit
+    img#logo.centered(src='/images/logo-w-name-128p.png')
+    h2 What is this sorcery?
+    p
+      | This, right here, is PathGame. The revolutionary Protein-protein Interaction Pathway Inference game that will change the world.
+    p
+      a.btn.btn-primary.btn-large(href="/about") Tell me more »
+    //
+       CytoscapeWeb Drawing Box START 
+    #cytoscapeweb
+      | Cytoscape Web will replace the contents of this div with your graph.
+    //
+       CytoscapeWeb Drawing Box END 
+  //
+     Example row of columns 
+  .row
+    .span4
+      h2 What is it about?
+      p
+        | Nothing really. We'll be honest, we're throwing science at the walls here to see what sticks. No idea what it'll do.
+      p
+        a.btn(href='/about') I demand more details »
+    .span4
+      h2 How to play
+      p
+        | Move around the nodes and connect them together until something good happens.
+        | We are aware that this is an intellectually intensive task, however, there is no known better way to do it, so, get to work!
+      p
+        a.btn(href='/about') What?! »
+    .span4
+      h2 Is there an ultimate purpose?
+      p Yes.
+      p
+        a.btn(href='/about') Aaand...? »

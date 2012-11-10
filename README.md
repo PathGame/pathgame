@@ -7,9 +7,15 @@ Check out the code and install the dependencies:
 	cd pathgame
 	npm install
 
+oh and please do not forget to run the test just to be on the safe side:
+
+	npm test
+
 and start the node application:
 
 	node app
+
+and viola! Browse to [http://http://localhost:31534/](http://localhost:31534/) and you are done.
 
 # License #
     This program is free software: you can redistribute it and/or modify
