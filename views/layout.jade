@@ -61,60 +61,7 @@ html(lang='en')
 
     script(src='/bootstrap/js/bootstrap.min.js')
 
-    //
-       CytoscapeWeb Flash Prep START 
-    //
-       JSON support for IE (needed to use JS API) 
-    script(type='text/javascript', src='/cytoscape_web/js/min/json2.min.js')
-    //
-       Flash embedding utility (needed to embed Cytoscape Web) 
-    script(type='text/javascript', src='/cytoscape_web/js/min/AC_OETags.min.js')
-    //
-       Cytoscape Web JS API (needed to reference org.cytoscapeweb.Visualization) 
-    script(type='text/javascript', src='/cytoscape_web/js/min/cytoscapeweb.min.js')
-    //
-       CytoscapeWeb Flash Prep END 
-    script(type='text/javascript')
-      $(document).ready(function() {
-      $('.dropdown-toggle').dropdown();
-      $('.focus').hide();
-      $('.focus').each( function() {
-      if( $(this).html().length > 0 ) {
-      $(this).addClass("alert alert-success");
-      var closeButton =  $("<a data-dismiss='alert'>").addClass("close").html("x");
-      $(this).prepend(closeButton);
-      $(this).delay(500).slideDown().delay(4000).fadeOut();
-      }
-      });
-      $('.error').each( function() {
-      $(this).addClass("alert alert-error");
-      });
-      });
-      window.onload=function() {
-      // id of Cytoscape Web container div
-      var div_id = "cytoscapeweb";
-      // you could also use other formats (e.g. GraphML) or grab the network data via AJAX
-      var networ_json = {
-      data: {
-      nodes: [ { id: "1" }, { id: "2" }, { id: "3" }, { id: "4" }, { id: "5" } ],
-      edges: [ { id: "1to2", target: "2", source: "1" },
-      { id: "2to3", target: "3", source: "2" },
-      { id: "2to4", target: "4", source: "2" },
-      { id: "2to5", target: "5", source: "2" } ]
-      }
-      };
-      // initialization options
-      var options = {
-      // where you have the Cytoscape Web SWF
-      swfPath: "/cytoscape_web/swf/CytoscapeWeb",
-      // where you have the Flash installer SWF
-      flashInstallerPath: "/cytoscape_web/swf/playerProductInstall"
-      };
-      // init and draw
-      var vis = new org.cytoscapeweb.Visualization(div_id, options);
-      vis.draw({ network: networ_json, layout: "Tree" });
-      vis.ready( function() {
-      vis.visualStyle({ nodes: { borderColor: "#ffffff", color: "#0970cb", size: 35 }, edges: { color: "#49d6e5", width: 5 } });
-      });
-      };
+    script(type='text/javascript', src='/js/arbor.js')
+    script(type='text/javascript', src='/js/cytoscape.min.js')
+    script(type='text/javascript', src='/js/pathgame.js')
 
